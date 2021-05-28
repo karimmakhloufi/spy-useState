@@ -1,7 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
+  const [data, setData] = useState("");
+  const testfunction = () => {
+    setData("clicked");
+  };
   return (
     <div className="App">
       <header className="App-header">
@@ -17,6 +22,7 @@ function App() {
         >
           Learn React
         </a>
+        <button onClick={testfunction}>Click me</button>
       </header>
     </div>
   );
